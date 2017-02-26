@@ -1,0 +1,8 @@
+{
+  "window.zoomLevel": 0,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "files.autoSave": "off"
+}
