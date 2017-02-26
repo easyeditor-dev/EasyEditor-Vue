@@ -18,11 +18,10 @@
       }
     },
     methods: {
-      editorInit: function () {
+      editorInit () {
         this.editor = ace.edit('javascript-editor')
         this.editor.getSession().setMode('ace/mode/javascript')
         this.editor.setTheme('ace/theme/monokai')
-        this.editor.setKeyboardHandler('ace/keyboard/vim')
         this.editor.setValue([
           '// javascript',
           'console.log("Hello World")'
@@ -31,7 +30,7 @@
         this.editor.clearSelection()
       }
     },
-    mounted: function () {
+    mounted () {
       this.editorInit()
     }
   }
