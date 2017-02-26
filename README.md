@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Easyeditor-vue
 
 > EasyEditor project for VueJS
@@ -28,3 +29,6 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# EasyEditor-Vue
+>>>>>>> 90d04d577d74709ad31a845d06d5f7acc971bd7f

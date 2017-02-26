@@ -1,20 +1,38 @@
 <template>
-  <div class="editor">
+  <div>
+    <div id="javascript-editor" class="editor"></div>
   </div>
 </template>
 
 <script>
+  import ace from 'brace'
+  import 'brace/mode/javascript'
+  import 'brace/theme/monokai'
+  import 'brace/keybinding/vim'
+
   export default {
     name: 'editor',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        editor: ''
       }
     },
     methods: {
-      handleSelect (key, keyPath) {
-        console.log(key, keyPath)
+      editorInit: function () {
+        this.editor = ace.edit('javascript-editor')
+        this.editor.getSession().setMode('ace/mode/javascript')
+        this.editor.setTheme('ace/theme/monokai')
+        this.editor.setKeyboardHandler('ace/keyboard/vim')
+        this.editor.setValue([
+          '// javascript',
+          'console.log("Hello World")'
+        ].join('\n')
+        )
+        this.editor.clearSelection()
       }
+    },
+    mounted: function () {
+      this.editorInit()
     }
   }
 
@@ -39,6 +57,12 @@
   
   a {
     color: #42b983;
+  }
+  
+  div.editor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 </style>
 
